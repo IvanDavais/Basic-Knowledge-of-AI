@@ -1,1 +1,1 @@
-# Basic-Knowledge-of-AI
+# Basic Python
