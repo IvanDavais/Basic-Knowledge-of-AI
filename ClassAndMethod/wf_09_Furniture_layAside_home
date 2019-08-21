@@ -1,0 +1,35 @@
+class House:
+    def __init__(self, house_type, area):
+        self.house_type = house_type
+        self.area = area
+        self.furniture_name_list = []
+        self.freearea = 0.0
+        self.furniture_area = 0.0
+
+    def __str__(self):
+        return " House type: %s,\n Area: %.2f,\n Free_area: %.2f,\n Furniture: %s\n" \
+               % (self.house_type, self.area, self.freearea, self.furniture_name_list)
+
+    def add_item(self, house_item):
+
+        self.furniture_name_list.append(house_item.name)
+        self.furniture_area += house_item.area
+        self.freearea = self.area -self.furniture_area
+        return self.freearea
+
+
+
+class HouseItem:
+    def __init__(self, name, area):
+        self.name = name
+        self.area = area
+
+
+my_house = House("1号户型",200)
+my_bed = HouseItem("席梦思", 4.0)
+my_closet = HouseItem("衣柜", 2.0)
+my_table = HouseItem("餐桌",1.5)
+my_house.add_item(my_bed)
+my_house.add_item(my_closet)
+my_house.add_item(my_table)
+print(my_house)
