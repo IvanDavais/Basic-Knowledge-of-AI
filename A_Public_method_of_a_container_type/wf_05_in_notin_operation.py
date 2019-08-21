@@ -1,0 +1,6 @@
+print("a" in "abcde")
+print("a" not in "abcde")
+print(1 in [0, 1, 2])
+print(1 not in [0, 1, 2])
+print("a" in {"a": "Ivan"})
+print("Ivan" in {"a": "Ivan"})

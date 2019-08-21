@@ -1,0 +1,14 @@
+"""This python file focus on teach user use debug tools"""
+
+num = 10
+
+
+def demo1():
+    print("demo1 ==> %d " %num)
+
+
+def demo2():
+    print("demo2 ==> %d" %num)
+
+demo1()
+demo2()
